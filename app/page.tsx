@@ -1,6 +1,6 @@
-import Button from "./components/Button/Button";
-import Input from "./components/Input/Input";
-import RadioGroup from "./components/RadioGroup/RadioGroup";
+import HomeMain from "./HomeMain";
+import Divider from "./components/Divider";
+import Header from "./sections/Header/Header";
 
 const radioGroup = {
    defaultValue: "e-money",
@@ -19,10 +19,15 @@ const radioGroup = {
 };
 export default function Home() {
    return (
-      <div className="flex min-h-screen justify-center items-center">
-         <Button variant="primary">Shop</Button>
-         <Input placeholder="something" />
-         <RadioGroup data={radioGroup} />
-      </div>
+      <>
+         <Header />
+         <Divider
+            direction="horizontal"
+            style={{
+               backgroundColor: "#2D2D2D",
+            }}
+         />
+         <HomeMain />
+      </>
    );
 }

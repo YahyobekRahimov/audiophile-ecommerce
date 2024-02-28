@@ -20,12 +20,14 @@ const config = {
       extend: {
          colors: {
             "custom-brown": "#D87D4A",
-            "custom-almostBlack": "#101010",
+            "custom-black-900": "#0E0E0E",
+            "custom-black-800": "#101010",
             "custom-grey": "#F1F1F1",
             "custom-light-grey": "#FAFAFA",
             "custom-pinkOrange": "#fbaf85",
             "custom-white": "#FFFFFF",
             "custom-black": "#000000",
+            "custom-red": "#CD2C2C",
             border: "hsl(var(--border))",
             input: "hsl(var(--input))",
             ring: "hsl(var(--ring))",
