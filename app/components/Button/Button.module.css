@@ -1,0 +1,3 @@
+.button-parent:hover svg {
+   transform: translateX(0.3rem);
+}
