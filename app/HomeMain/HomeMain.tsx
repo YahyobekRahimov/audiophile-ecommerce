@@ -1,4 +1,5 @@
 import HeroSection from "./HeroSection";
+import ProductsSection from "./ProductsSection";
 import StoreSection from "./StoreSection";
 
 export default function HomeMain() {
@@ -6,6 +7,7 @@ export default function HomeMain() {
       <main>
          <HeroSection />
          <StoreSection />
+         <ProductsSection />
       </main>
    );
 }

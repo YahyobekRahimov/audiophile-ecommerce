@@ -1,5 +1,6 @@
 import HomeMain from "./HomeMain/HomeMain";
 import Divider from "./components/Divider";
+import Footer from "./sections/Footer/Footer";
 import Header from "./sections/Header/Header";
 
 const radioGroup = {
@@ -28,6 +29,7 @@ export default function Home() {
             }}
          />
          <HomeMain />
+         <Footer />
       </>
    );
 }
