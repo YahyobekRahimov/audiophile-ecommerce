@@ -47,7 +47,7 @@ export default function MobileNavMenu() {
    const [isOpen, setIsOpen] = useState<boolean>(false);
    const router = useRouter();
    return (
-      <>
+      <div className="lg:hidden">
          <button onClick={() => setIsOpen(!isOpen)}>
             <HamburgerIcon />
          </button>
@@ -59,7 +59,7 @@ export default function MobileNavMenu() {
                   : { transform: "translateY(100%)" }
             }
          >
-            <Container className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-[4.25rem]">
+            <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-[4.25rem] md:px-10">
                {menu.map((item, index) => (
                   <div
                      className="bg-custom-grey flex flex-col items-center h-[10.25rem] relative"
@@ -88,7 +88,7 @@ export default function MobileNavMenu() {
                      </Button>
                   </div>
                ))}
-            </Container>
+            </div>
          </div>
          <div
             onClick={() => setIsOpen(false)}
@@ -96,6 +96,6 @@ export default function MobileNavMenu() {
                isOpen ? "" : "hidden"
             }`}
          ></div>
-      </>
+      </div>
    );
 }

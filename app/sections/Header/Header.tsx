@@ -3,6 +3,7 @@ import Logo from "@/app/components/IconComponents/Logo";
 import Link from "next/link";
 import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
 import CartButton from "./CartButton/CartButton";
+import DesktopNav from "./DesktopNav/DesktopNav";
 
 export default function Header() {
    return (
@@ -12,6 +13,7 @@ export default function Header() {
             <Link href="/">
                <Logo />
             </Link>
+            <DesktopNav />
             <CartButton />
          </Container>
       </header>
