@@ -1,4 +1,4 @@
-import HomeMain from "./HomeMain";
+import HomeMain from "./HomeMain/HomeMain";
 import Divider from "./components/Divider";
 import Header from "./sections/Header/Header";
 
