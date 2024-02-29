@@ -25,7 +25,11 @@ export default function ProductsSection() {
                Upgrade to premium speakers that are phenomenally built
                to deliver truly remarkable sound.
             </p>
-            <Button link="/category/speaker" variant="outlined">
+            <Button
+               link="/category/speaker"
+               variant="outlined"
+               className="z-10"
+            >
                See product
             </Button>
          </div>

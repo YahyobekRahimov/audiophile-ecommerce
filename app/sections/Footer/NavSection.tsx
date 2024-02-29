@@ -11,7 +11,7 @@ export default function NavSection() {
                <ul className="uppercase">
                   <li>
                      <Link
-                        className="text-white tracking-[2px] font-bold text-[0.8125rem]"
+                        className="text-white tracking-[2px] font-bold text-[0.8125rem] hover:text-custom-brown duration-200"
                         href="/"
                      >
                         home
@@ -19,7 +19,7 @@ export default function NavSection() {
                   </li>
                   <li>
                      <Link
-                        className="text-white tracking-[2px] font-bold text-[0.8125rem]"
+                        className="text-white tracking-[2px] font-bold text-[0.8125rem] hover:text-custom-brown duration-200"
                         href="/category/headphone"
                      >
                         headphones
@@ -27,7 +27,7 @@ export default function NavSection() {
                   </li>
                   <li>
                      <Link
-                        className="text-white tracking-[2px] font-bold text-[0.8125rem]"
+                        className="text-white tracking-[2px] font-bold text-[0.8125rem] hover:text-custom-brown duration-200"
                         href="/category/speaker"
                      >
                         speakers
@@ -35,7 +35,7 @@ export default function NavSection() {
                   </li>
                   <li>
                      <Link
-                        className="text-white tracking-[2px] font-bold text-[0.8125rem]"
+                        className="text-white tracking-[2px] font-bold text-[0.8125rem] hover:text-custom-brown duration-200"
                         href="/category/earphone"
                      >
                         earphones
