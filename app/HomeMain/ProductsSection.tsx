@@ -14,14 +14,14 @@ export default function ProductsSection() {
                   height={207}
                   className=""
                />
-               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[17.5rem] w-[17.5rem] border border-white border-solid rounded-full opacity-40"></div>
-               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[20rem] w-[20rem] border border-white border-solid rounded-full opacity-40"></div>
-               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[34.875rem] w-[34.875rem] border border-white border-solid rounded-full opacity-40"></div>
+               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[17.5rem] w-[17.5rem] md:h-[30rem] md:w-[30rem] border border-white border-solid rounded-full opacity-40"></div>
+               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[20rem] w-[20rem] md:h-[35rem] md:w-[35rem] border border-white border-solid rounded-full opacity-40"></div>
+               <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[34.875rem] w-[34.875rem] md:h-[48rem] md:w-[48rem] border border-white border-solid rounded-full opacity-40"></div>
             </div>
-            <h2 className="text-custom-white font-bold text-4xl tracking-[1.286px] uppercase mt-2">
+            <h2 className="text-custom-white font-bold text-4xl tracking-[1.286px] uppercase mt-2 md:w-[10rem] md:text-center">
                ZX9 SPEAKER
             </h2>
-            <p className="text-[0.9375rem] opacity-75 text-white">
+            <p className="text-[0.9375rem] opacity-75 text-white md:w-[20rem] md:text-center">
                Upgrade to premium speakers that are phenomenally built
                to deliver truly remarkable sound.
             </p>
@@ -33,8 +33,8 @@ export default function ProductsSection() {
                See product
             </Button>
          </div>
-         <div className="relative flex items-center min-h-[23.125rem] rounded-lg overflow-hidden">
-            <div className="flex flex-col gap-8 h-full p-6">
+         <div className="relative flex items-center min-h-[23.125rem] rounded-lg overflow-hidden lg:items-start">
+            <div className="flex flex-col gap-8 h-full p-6 w-full lg:justify-center lg:items-start lg:pt-20">
                <h2 className="text-[1.75rem] font-bold tracking-[2px] uppercase">
                   ZX7 SPEAKER
                </h2>
@@ -58,23 +58,23 @@ export default function ProductsSection() {
                alt="speaker zx7"
                width={529}
                height={367}
-               className="absolute top-0 left-0 z-[-1] hidden lg:inline-block"
+               className="absolute top-0 left-0 z-[-1] hidden lg:inline-block w-full"
             />
             <Image
                src="/assets/home/tablet/image-speaker-zx7.jpg"
                alt="speaker zx7"
                width={529}
                height={367}
-               className="absolute top-0 left-0 z-[-1] hidden md:inline-block"
+               className="absolute top-0 left-0 z-[-1] hidden md:inline-block lg:hidden w-full"
             />
          </div>
-         <div className="flex flex-col gap-6">
+         <div className="flex flex-col gap-6 md:flex-row md:gap-3">
             <div className="overflow-hidden rounded-lg">
                <Image
                   src="/assets/home/desktop/image-earphones-yx1.jpg"
                   alt="earphone yx1"
-                  width={999}
-                  height={1255}
+                  width={731}
+                  height={919}
                   className="hidden lg:inline-block"
                />
                <Image
@@ -82,17 +82,17 @@ export default function ProductsSection() {
                   alt="earphone yx1"
                   width={999}
                   height={1255}
-                  className="md:hidden"
+                  className="md:hidden w-full"
                />
                <Image
                   src="/assets/home/tablet/image-earphones-yx1.jpg"
                   alt="earphone yx1"
                   width={999}
                   height={1255}
-                  className="hidden md:inline-block lg:hidden"
+                  className="hidden md:inline-block lg:hidden w-[100%]"
                />
             </div>
-            <div className="bg-custom-grey rounded-lg py-10 pl-6 pr-14">
+            <div className="bg-custom-grey rounded-lg py-10 pl-6 pr-14 md:flex md:flex-col md:justify-center md:items-center lg:w-[70%] lg:items-start lg:pl-24">
                <h2 className="text-[1.75rem] font-bold tracking-[2px] uppercase mb-8">
                   YX1 EARPHONES
                </h2>
