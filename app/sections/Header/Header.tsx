@@ -37,7 +37,7 @@ export default function Header() {
       >
          <Container
             className={`flex items-center justify-between py-8 relative duration-200 ${
-               isHeaderFixed ? "py-4" : ""
+               isHeaderFixed ? "md:py-4 py-3" : ""
             }`}
          >
             <MobileNavMenu />

@@ -15,7 +15,6 @@ export default async function CategoryMain({
    category: string;
 }) {
    const data: ProductsType = await getData();
-   console.log(data);
    const products: ProductsType = data.filter((product) => {
       return product.category === category + "s";
    });
@@ -32,29 +31,36 @@ export default async function CategoryMain({
             <Container>
                <div>
                   {products.map((product, index) => (
-                     <div key={index} className="mt-16 mb-[7.5rem]">
+                     <div
+                        key={index}
+                        className={`mt-16 mb-[7.5rem] lg:flex lg:gap-[10rem] lg:items-center ${
+                           index % 2 === 1
+                              ? "lg:flex-row-reverse"
+                              : ""
+                        }`}
+                     >
                         <Image
                            src={product.categoryImage.desktop}
                            alt={product.name}
                            width={349}
                            height={386}
-                           className="w-full h-auto hidden lg:inline-block"
+                           className="w-full rounded-lg h-auto hidden lg:inline-block"
                         />
                         <Image
                            src={product.categoryImage.tablet}
                            alt={product.name}
                            width={220}
                            height={243}
-                           className="w-full h-auto hidden md:inline-block lg:hidden"
+                           className="w-full rounded-lg h-auto hidden md:inline-block lg:hidden"
                         />
                         <Image
                            src={product.categoryImage.mobile}
                            alt={product.name}
                            width={220}
                            height={243}
-                           className="w-full h-auto md:hidden"
+                           className="w-full rounded-lg h-auto md:hidden"
                         />
-                        <div className="pt-8 flex flex-col gap-6 text-center items-center">
+                        <div className="pt-8 flex flex-col gap-6 text-center items-center lg:text-start lg:items-start">
                            {product.new && (
                               <p className="uppercase tracking-[10px] text-sm text-custom-brown">
                                  New product
