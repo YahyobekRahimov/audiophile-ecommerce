@@ -46,13 +46,30 @@ const menu: IMenuItem[] = [
 export default function MobileNavMenu() {
    const [isOpen, setIsOpen] = useState<boolean>(false);
    const router = useRouter();
+   const handleOpen = () => {
+      setIsOpen(true);
+      document.body.style.overflow = "hidden";
+   };
+   const handleClose = () => {
+      setIsOpen(false);
+
+      document.body.style.overflow = "auto";
+   };
+
+   const handleHamburgerClick = () => {
+      if (isOpen) {
+         handleClose();
+      } else {
+         handleOpen();
+      }
+   };
    return (
       <div className="lg:hidden">
-         <button onClick={() => setIsOpen(!isOpen)}>
+         <button onClick={handleHamburgerClick}>
             <HamburgerIcon />
          </button>
          <div
-            className={`absolute z-20 w-screen bottom-0 left-0 bg-white h-max pt-[5.25rem] pb-[2.1875rem] translate-y-[100%] duration-300`}
+            className={`absolute z-20 w-screen bottom-0 left-0 bg-white h-max pt-[5.25rem] pb-[2.1875rem] translate-y-[100%] duration-300 overflow-y-scroll max-h-[80vh]`}
             style={
                !isOpen
                   ? { transform: "translateY(-100%)" }
@@ -91,7 +108,7 @@ export default function MobileNavMenu() {
             </div>
          </div>
          <div
-            onClick={() => setIsOpen(false)}
+            onClick={handleClose}
             className={`absolute z-10 bg-black bottom-0 translate-y-[100%] left-0 opacity-50 w-screen h-screen ${
                isOpen ? "" : "hidden"
             }`}
