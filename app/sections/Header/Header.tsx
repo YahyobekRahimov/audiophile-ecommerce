@@ -24,6 +24,7 @@ export default function Header() {
       // Clean up the event listener on unmount
       return () => {
          window.removeEventListener("scroll", handleScroll);
+         document.body.style.overflow = "auto";
       };
    }, []);
    return (

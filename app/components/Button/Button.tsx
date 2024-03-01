@@ -36,7 +36,7 @@ export default function Button({
       return (
          <Link
             href={link}
-            className={`flex items-center justify-center uppercase text-[0.8125rem] font-bold duration-200 tracking-[1px] button-parent ${classStyles} ${
+            className={`flex items-center justify-center uppercase text-[0.8125rem] font-bold duration-200 tracking-[1px] button-parent w-max ${classStyles} ${
                styles["button-parent"]
             } ${className ?? ""}`}
             style={style}

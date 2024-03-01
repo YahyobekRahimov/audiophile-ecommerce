@@ -23,13 +23,13 @@ const menu: IMenuItem[] = [
       image: { src: "/images/headphone.png", width: 79, height: 104 },
       title: "Headphones",
       buttonTitle: "SHOP",
-      link: "/category/headphones",
+      link: "/category/headphone",
    },
    {
       image: { src: "/images/speaker.png", width: 84, height: 101 },
       title: "Speakers",
       buttonTitle: "SHOP",
-      link: "/category/speakers",
+      link: "/category/speaker",
    },
    {
       image: {
@@ -39,7 +39,7 @@ const menu: IMenuItem[] = [
       },
       title: "Earphones",
       buttonTitle: "SHOP",
-      link: "/category/earphones",
+      link: "/category/earphone",
    },
 ];
 
