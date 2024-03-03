@@ -51,11 +51,11 @@ export default function NavSection() {
                <div className="text-[0.9375rem] leading-[1.66em] w-full xl:flex xl:items-end xl:justify-between">
                   <p className="xl:w-[50%]">
                      Audiophile is an all in one stop to fulfill your
-                     audio needs. We're a small team of music lovers
-                     and sound specialists who are devoted to helping
-                     you get the most out of personal audio. Come and
-                     visit our demo facility - we're open 7 days a
-                     week.
+                     audio needs. We{"'"}re a small team of music
+                     lovers and sound specialists who are devoted to
+                     helping you get the most out of personal audio.
+                     Come and visit our demo facility - we{"'"}re open
+                     7 days a week.
                   </p>
                   <SocialLinks className="hidden xl:flex xl:flex-row" />
                </div>

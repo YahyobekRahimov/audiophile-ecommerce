@@ -8,7 +8,7 @@ import {
    addProductToCart,
    changeCount,
 } from "@/lib/slices/cartProductsSlice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
 export default function ButtonGroup({
@@ -16,7 +16,7 @@ export default function ButtonGroup({
 }: {
    product: ProductType;
 }) {
-   const [count, setCount] = useState<number>(getCount(product.slug));
+   const [count, setCount] = useState<number>(1);
    const dispatch = useDispatch();
    const [addedToCart, setAddedToCart] = useState<boolean>(
       useAppSelector((state) =>
@@ -28,16 +28,14 @@ export default function ButtonGroup({
       dispatch(addProductToCart({ ...product, count }));
    };
 
-   function getCount(slug: string) {
+   useEffect(() => {
       const productFromCart = useAppSelector((state) =>
-         state.cartProducts.find((pro) => pro.slug === slug)
+         state.cartProducts.find((pro) => pro.slug === product.slug)
       );
       if (productFromCart) {
-         return productFromCart.count;
+         setCount(productFromCart.count);
       }
-      return 1;
-   }
-
+   }, []);
    const handleIncrement = () => {
       setCount(count + 1);
       if (addedToCart) {
