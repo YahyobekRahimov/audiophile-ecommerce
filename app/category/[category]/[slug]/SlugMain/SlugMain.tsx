@@ -7,7 +7,9 @@ import Button from "@/app/components/Button/Button";
 import StoreSection from "@/app/HomeMain/StoreSection";
 
 export async function getData() {
-   const data = await fetch(`${process.env.baseURL}/api/products`);
+   const data = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/products`
+   );
    return data.json();
 }
 
