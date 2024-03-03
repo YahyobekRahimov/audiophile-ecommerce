@@ -2,6 +2,7 @@
 
 import Button from "@/app/components/Button/Button";
 import IncrementDecrementButton from "@/app/components/IncrementDecrementButton";
+import useProduct from "@/app/hooks/useProduct";
 import { ProductType } from "@/app/types/types";
 import { useAppSelector } from "@/lib/hooks";
 import {
@@ -16,7 +17,10 @@ export default function ButtonGroup({
 }: {
    product: ProductType;
 }) {
-   const [count, setCount] = useState<number>(1);
+   const productFromCart = useProduct(product.slug);
+   const [count, setCount] = useState<number>(
+      productFromCart?.count ?? 1
+   );
    const dispatch = useDispatch();
    const [addedToCart, setAddedToCart] = useState<boolean>(
       useAppSelector((state) =>
@@ -28,14 +32,6 @@ export default function ButtonGroup({
       dispatch(addProductToCart({ ...product, count }));
    };
 
-   useEffect(() => {
-      const productFromCart = useAppSelector((state) =>
-         state.cartProducts.find((pro) => pro.slug === product.slug)
-      );
-      if (productFromCart) {
-         setCount(productFromCart.count);
-      }
-   }, []);
    const handleIncrement = () => {
       setCount(count + 1);
       if (addedToCart) {
