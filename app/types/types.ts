@@ -1,5 +1,9 @@
 export type ProductsType = ProductType[];
 
+export interface IProductInCart extends ProductType {
+   count: number;
+}
+
 export interface ProductType {
    id: number;
    slug: string;
