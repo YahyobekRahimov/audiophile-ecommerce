@@ -54,7 +54,7 @@ export default function NavSection() {
                      audio needs. We're a small team of music lovers
                      and sound specialists who are devoted to helping
                      you get the most out of personal audio. Come and
-                     visit our demo facility - we’re open 7 days a
+                     visit our demo facility - we're open 7 days a
                      week.
                   </p>
                   <SocialLinks className="hidden xl:flex xl:flex-row" />

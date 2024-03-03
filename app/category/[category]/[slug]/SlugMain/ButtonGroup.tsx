@@ -16,7 +16,7 @@ export default function ButtonGroup({
 }: {
    product: ProductType;
 }) {
-   const [count, setCount] = useState<number>(getCount());
+   const [count, setCount] = useState<number>(getCount(product.slug));
    const dispatch = useDispatch();
    const [addedToCart, setAddedToCart] = useState<boolean>(
       useAppSelector((state) =>
@@ -28,9 +28,9 @@ export default function ButtonGroup({
       dispatch(addProductToCart({ ...product, count }));
    };
 
-   function getCount() {
+   function getCount(slug: string) {
       const productFromCart = useAppSelector((state) =>
-         state.cartProducts.find((pro) => pro.slug === product.slug)
+         state.cartProducts.find((pro) => pro.slug === slug)
       );
       if (productFromCart) {
          return productFromCart.count;
