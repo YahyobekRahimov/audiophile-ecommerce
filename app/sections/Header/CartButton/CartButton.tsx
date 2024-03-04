@@ -94,7 +94,7 @@ export default function CartButton() {
                      </Button>
                   </>
                ) : (
-                  <div>You don't have any items in the Cart</div>
+                  <div>You don{"'"}t have any items in the Cart</div>
                )}
             </div>,
             document.body
