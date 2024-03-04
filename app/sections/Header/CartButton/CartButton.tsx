@@ -52,7 +52,7 @@ export default function CartButton() {
             <Badge products={productsInCart} />
          </button>
          <div
-            className={`bg-white rounded-lg py-8 px-7 fixed top-[15%] transition-all translate-y-[-50%] duration-500 left-[50%] opacity-0 w-[90vw] translate-x-[-50%] z-10 md:w-[50vw] md:translate-x-[-2.5rem] md:top-[10%] lg:w-[40vw] lg:translate-x-[0rem] ${
+            className={`bg-white rounded-lg z-20 py-8 px-7 fixed top-[15%] transition-all translate-y-[-50%] duration-500 left-[50%] opacity-0 w-[90vw] translate-x-[-50%] z-10 md:w-[50vw] md:translate-x-[-2.5rem] md:top-[10%] lg:w-[40vw] lg:translate-x-[0rem] ${
                isOpen
                   ? "visible translate-x-[-50%] translate-y-[0%] opacity-100 md:translate-x-[0%]"
                   : "invisible"
@@ -96,7 +96,7 @@ export default function CartButton() {
          {isOpen && (
             <div
                onClick={() => setIsOpen(false)}
-               className="w-screen h-screen fixed top-0 left-0 bg-custom-black opacity-30"
+               className="w-screen h-screen z-10 fixed top-0 left-0 bg-custom-black opacity-30"
             ></div>
          )}
       </div>
