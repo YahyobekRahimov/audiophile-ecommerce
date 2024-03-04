@@ -1,3 +1,5 @@
+import { RefObject } from "react";
+
 export default function Input({
    type,
    placeholder,
@@ -6,6 +8,7 @@ export default function Input({
    id,
    error,
    label,
+   inputRef,
 }: {
    type?: "text" | "number" | "tel" | "email";
    placeholder?: string;
@@ -14,6 +17,7 @@ export default function Input({
    label?: string;
    error?: string;
    id?: string;
+   inputRef?: RefObject<HTMLInputElement>;
 }) {
    return (
       <label htmlFor={id} className="flex flex-col gap-2">
@@ -33,6 +37,7 @@ export default function Input({
             className={`rounded-lg text-sm py-[1.125rem] px-6 placeholder:text-black placeholder:opacity-40 font-bold border-[#CFCFCF] border-solid border-2 focus:outline-none focus:border-custom-brown focus:caret-custom-brown ${
                className ?? ""
             } ${error ? "border-custom-red" : ""}`}
+            ref={inputRef}
          />
       </label>
    );

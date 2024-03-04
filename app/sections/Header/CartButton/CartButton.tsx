@@ -60,34 +60,42 @@ export default function CartButton() {
                      : "invisible"
                }`}
             >
-               <div className="flex items-center justify-between gap-10 text-nowrap mb-[2rem]">
-                  <h3 className="uppercase font-bold tracking-[1.286px] text-[1.125rem] leading-normal">
-                     Cart ({productsInCart.length})
-                  </h3>
-                  <button
-                     className="underline text-opacity-50 hover:text-custom-brown"
-                     onClick={() => dispatch(removeAllProducts())}
-                  >
-                     Remove all
-                  </button>
-               </div>
-               <CartProducts productsInCart={productsInCart} />
-               <div className="flex justify-between items-center mt-[2rem]">
-                  <span className="uppercase text-[0.9375rem] text-opacity-50">
-                     Total
-                  </span>
-                  <span className="font-bold">
-                     $ {total.toLocaleString()}
-                  </span>
-               </div>
-               <Button
-                  variant="primary"
-                  className="w-full mt-6"
-                  link="/checkout"
-                  style={{ width: "100%" }}
-               >
-                  Checkout
-               </Button>
+               {productsInCart.length ? (
+                  <>
+                     <div className="flex items-center justify-between gap-10 text-nowrap mb-[2rem]">
+                        <h3 className="uppercase font-bold tracking-[1.286px] text-[1.125rem] leading-normal">
+                           Cart ({productsInCart.length})
+                        </h3>
+                        <button
+                           className="underline text-opacity-50 hover:text-custom-brown"
+                           onClick={() =>
+                              dispatch(removeAllProducts())
+                           }
+                        >
+                           Remove all
+                        </button>
+                     </div>
+                     <CartProducts productsInCart={productsInCart} />
+                     <div className="flex justify-between items-center mt-[2rem]">
+                        <span className="uppercase text-[0.9375rem] text-opacity-50">
+                           Total
+                        </span>
+                        <span className="font-bold">
+                           $ {total.toLocaleString()}
+                        </span>
+                     </div>
+                     <Button
+                        variant="primary"
+                        className="w-full mt-6"
+                        link="/checkout"
+                        style={{ width: "100%" }}
+                     >
+                        Checkout
+                     </Button>
+                  </>
+               ) : (
+                  <div>You don't have any items in the Cart</div>
+               )}
             </div>,
             document.body
          )}

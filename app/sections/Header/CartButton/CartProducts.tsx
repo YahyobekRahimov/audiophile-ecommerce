@@ -43,7 +43,7 @@ export default function CartProducts({
                         {product.name}
                      </h4>
                      <p className="font-bold text-sm text-opacity-50 text-custom-black">
-                        ${product.price.toLocaleString()}
+                        $ {product.price.toLocaleString()}
                      </p>
                   </div>
                   <IncrementDecrementButton

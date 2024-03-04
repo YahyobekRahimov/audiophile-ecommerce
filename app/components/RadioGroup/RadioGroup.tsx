@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/radio-group";
 import { useState } from "react";
 
-interface IRadio {
+export interface IRadio {
    label: string;
    value: string;
    id: string | number;
