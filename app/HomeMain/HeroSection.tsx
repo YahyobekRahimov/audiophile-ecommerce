@@ -29,7 +29,9 @@ export default function HeroSection() {
                   build quality made for the passionate music
                   enthusiast.
                </p>
-               <Button>see product</Button>
+               <Button link="/category/headphones/xx99-mark-two-headphones">
+                  see product
+               </Button>
             </div>
             <div className="overflow-hidden">
                <Image

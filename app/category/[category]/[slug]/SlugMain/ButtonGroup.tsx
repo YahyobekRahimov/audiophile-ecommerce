@@ -52,6 +52,15 @@ export default function ButtonGroup({
       }
    };
 
+   useEffect(() => {
+      if (!productFromCart) {
+         setAddedToCart(false);
+         setCount(1);
+      } else {
+         setCount(productFromCart.count);
+      }
+   }, [productFromCart]);
+
    return (
       <div className="flex gap-4 mt-[2rem]">
          <IncrementDecrementButton
@@ -60,7 +69,13 @@ export default function ButtonGroup({
             handleIncrement={handleIncrement}
          />
          {addedToCart ? (
-            <Button variant="outlined">Jump to checkout</Button>
+            <Button
+               variant="outlined"
+               link="/checkout"
+               className="w-max text-center"
+            >
+               Jump to checkout
+            </Button>
          ) : (
             <Button onClick={handleAddToCart} variant="primary">
                ADD TO CART

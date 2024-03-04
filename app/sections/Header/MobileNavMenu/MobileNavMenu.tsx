@@ -69,11 +69,11 @@ export default function MobileNavMenu() {
             <HamburgerIcon />
          </button>
          <div
-            className={`absolute z-20 w-screen bottom-0 left-0 bg-white h-max pt-[5.25rem] pb-[2.1875rem] translate-y-[100%] duration-300 overflow-y-scroll max-h-[80vh]`}
+            className={`absolute z-20 w-screen bottom-0 left-0 bg-white h-max pt-[5.25rem] transition-all translate-y-[-30%] pb-[2.1875rem] duration-300 overflow-y-scroll max-h-[80vh]`}
             style={
                !isOpen
-                  ? { transform: "translateY(-100%)" }
-                  : { transform: "translateY(100%)" }
+                  ? { transform: "translateY(-30%)", opacity: "0" }
+                  : { transform: "translateY(100%)", opacity: "1" }
             }
          >
             <div className="grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-[4.25rem] md:px-10">

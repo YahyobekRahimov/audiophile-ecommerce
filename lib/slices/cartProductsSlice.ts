@@ -32,10 +32,17 @@ const cartProductsSlice = createSlice({
             state[index].count = payload.count;
          }
       },
+      removeAllProducts: () => {
+         return [];
+      },
    },
 });
 
 export default cartProductsSlice.reducer;
 
-export const { addProductToCart, removeProduct, changeCount } =
-   cartProductsSlice.actions;
+export const {
+   addProductToCart,
+   removeProduct,
+   changeCount,
+   removeAllProducts,
+} = cartProductsSlice.actions;
