@@ -146,6 +146,7 @@ export default function CheckoutForm({
                      label="e-Money Number"
                      id="emoneyNumber"
                      key="eMoneyNumber"
+                     inputRef={references.emoneyNumberRef}
                      error={errors.emoneyNumberError}
                   />
                   <Input
@@ -154,6 +155,7 @@ export default function CheckoutForm({
                      label="e-Money PIN"
                      id="eMoneyPIN"
                      key="eMoneyPIN"
+                     inputRef={references.emoneyPINRef}
                      error={errors.emoneyPINError}
                   />
                </div>

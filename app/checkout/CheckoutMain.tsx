@@ -5,6 +5,7 @@ import Container from "../components/Container";
 import GoBack from "../components/GoBack";
 import CheckoutForm from "./CheckoutForm";
 import Summary from "./Summary";
+import OrderCompleted from "./OrderCompleted";
 
 export interface IErrors {
    nameError: string;
@@ -42,6 +43,8 @@ export default function CheckoutMain() {
    const emoneyPINRef = useRef<HTMLInputElement>(null);
 
    const [errors, setErrors] = useState<IErrors>(initialErrorsState);
+   const [formSuccessful, setFormSuccessful] =
+      useState<boolean>(false);
 
    const references = {
       nameRef,
@@ -118,6 +121,7 @@ export default function CheckoutMain() {
 
       // Validation for e-Money Number
       if (!emoneyNumberRef.current?.value) {
+         console.log(emoneyNumberRef.current?.value);
          newErrors = {
             ...newErrors,
             emoneyNumberError: "e-Money Number is required",
@@ -142,7 +146,7 @@ export default function CheckoutMain() {
       }
 
       // If all validations pass, you can proceed with form submission
-      console.log("Form submitted successfully!");
+      setFormSuccessful(true);
    };
 
    return (
@@ -161,6 +165,12 @@ export default function CheckoutMain() {
                <Summary handleSubmit={handleSubmit} />
             </div>
          </Container>
+         {formSuccessful && (
+            <OrderCompleted
+               setFormSuccessful={setFormSuccessful}
+               formSuccessful={formSuccessful}
+            />
+         )}
       </main>
    );
 }
